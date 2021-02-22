@@ -25,13 +25,12 @@ const setupGraph = (csv) => {
         traces[traceIdentifier].y.push(link);
         traces[traceIdentifier].text.push(flavor);
     }
-    console.log(traces);
 
     const layout = {
-        margin: {t: 30, l: 30},
+        margin: { t: 10 },
         hovermode: 'closest',
-        xaxis: { range: [0, 100] },
-        yaxis: { range: [0, 100] }
+        xaxis: { range: [0, 100], title: 'Rhett' },
+        yaxis: { range: [0, 100], title: 'Link' }
     };
 
     Plotly.newPlot('graph', Object.values(traces), layout)
